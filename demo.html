@@ -13,49 +13,37 @@
       padding: 40px 20px;
       color: #333;
     }
-    h1 { color: #6b4e9e; margin-bottom: 10px; }
+    h1 { color: #6b4e9e; }
     .cat { 
-      width: 220px; 
-      margin: 20px; 
+      width: 240px; 
+      margin: 20px auto; 
       border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      cursor: pointer;
-    }
-    .buttons {
-      max-width: 800px;
-      margin: 30px auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      display: block;
     }
     button {
-      margin: 8px;
-      padding: 14px 20px;
-      font-size: 16px;
+      margin: 6px;
+      padding: 12px 18px;
+      font-size: 15px;
       background: #6b4e9e;
       color: white;
       border: none;
       border-radius: 50px;
       cursor: pointer;
-      transition: all 0.2s;
     }
-    button:hover {
-      background: #9b7dd4;
-      transform: scale(1.08);
-    }
+    button:hover { background: #9b7dd4; transform: scale(1.05); }
   </style>
 </head>
 <body>
 
-  <h1>🐱 Welcome to Meow.js Demo</h1>
-  <p>Click the buttons and play with the cat!</p>
+  <h1>🐱 Meow.js Demo</h1>
+  <p>Click any button to see cat magic!</p>
   
-  <img src="https://picsum.photos/id/1015/400/400" 
-     class="cat" 
-     id="main-cat" 
-     alt="Cute cat for Meow.js demo" 
-     onerror="this.src='https://placekitten.com/400/400'">
+  <img src="https://picsum.photos/id/1015/400/400" class="cat" id="main-cat" alt="cute cat">
 
-  <div class="buttons">
+  <div>
     <button onclick="Meow.zoomies('#main-cat')">Zoomies</button>
-    <button onclick="Meow.catnip('#main-cat')">🐾 Catnip Mode</button>
+    <button onclick="Meow.catnip('#main-cat')">🐾 Catnip</button>
     <button onclick="Meow.pounce('#main-cat')">Pounce</button>
     <button onclick="Meow.tailWag('#main-cat')">Tail Wag</button>
     <button onclick="Meow.stretch('#main-cat')">Stretch</button>
@@ -63,18 +51,16 @@
     <button onclick="Meow.knockOver('#main-cat')">Knock Over</button>
     <button onclick="Meow.chaseLaser('#main-cat')">Laser Mode</button>
     <button onclick="Meow.carry('#main-cat')">Carry Me</button>
-    <button onclick="Meow.boop('#main-cat')">Boop Mode</button>
-    <button onclick="Meow.pawPrints(25)">Paw Prints</button>
+    <button onclick="Meow.boop('#main-cat')">Boop</button>
+    <button onclick="Meow.pawPrints(20)">Paw Prints</button>
     <button onclick="Meow.fishRain(20)">Fish Rain</button>
-    <button onclick="Meow.meowSound('long')">Meow Sound</button>
+    <button onclick="Meow.meowSound()">Meow Sound</button>
   </div>
 
+  <!-- Important: Load meow.js first -->
   <script src="meow.js"></script>
   <script>
-    // Auto start some fun
-    Meow.tailWag("#main-cat");
-    Meow.boop("#main-cat");
-    Meow.pawPrints(10);
+    console.log("Meow.js version:", Meow.version);
     Meow.giveFact();
   </script>
 </body>
