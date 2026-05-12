@@ -1,0 +1,8 @@
+{
+  "name": "meow.js",
+  "version": "1.1.0",
+  "description": "🐱 The cutest cat-themed animation & interaction library",
+  "main": "meow.js",
+  "keywords": ["cat", "animation", "javascript", "library", "fun", "meow"],
+  "license": "MIT"
+}
